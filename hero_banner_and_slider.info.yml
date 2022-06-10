@@ -4,6 +4,7 @@ description: 'This module provide the Hero banner and slider functionality.'
 core_version_requirement: ^9.2
 package: Hero Banner
 dependencies:
+  - drupal:link
   - drupal:breakpoint
   - drupal:responsive_image
   - drupal:media
