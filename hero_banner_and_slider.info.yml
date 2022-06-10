@@ -11,6 +11,7 @@ dependencies:
   - drupal:responsive_image
   - drupal:media
   - drupal:media_library
+  - media_library_edit:media_library_edit
   - drupal:field_ui
   - focal_point:focal_point
-  - media_library_edit:media_library_edit
+  - field_group:field_group

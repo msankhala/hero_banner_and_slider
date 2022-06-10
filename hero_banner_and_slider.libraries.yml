@@ -1,0 +1,29 @@
+slick:
+  remote: http://kenwheeler.github.io/slick/
+  version: 1.x
+  license:
+    name: MIT
+    url: https://github.com/kenwheeler/slick/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/slick/slick/slick.min.js: { weight: -3, minified: true }
+  css:
+    base:
+      /libraries/slick/slick/slick.css: {}
+  dependencies:
+    - core/jquery
+
+slick.theme:
+  version: VERSION
+  css:
+    theme:
+      css/theme/slick.theme.css: {}
+  dependencies:
+    - hero_banner_and_slider/slick
+
+hero_banner_and_slider:
+  js:
+    js/hero-banner-and-slider.js: {}
+  css:
+    component:
+      css/hero-banner-and-slider.css: {}
