@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * Implements hook_uninstall().
+ */
+function hero_banner_and_slider_uninstall() {
+  /** @var \Drupal\Core\Config\ConfigFactoryInterface
+   * $configFactory
+   */
+  $configFactory = \Drupal::configFactory();
+  $logger = \Drupal::logger('hero_banner_and_slider');
+  $configNames = [
+    'block_content.type.hero_banner_and_slider',
+    'core.entity_form_display.block_content.hero_banner_and_slider.default',
+    'core.entity_form_display.media.hero_banner_and_slider.default',
+    'core.entity_form_display.media.hero_banner_and_slider.media_library',
+    'core.entity_view_display.block_content.hero_banner_and_slider.default',
+    'core.entity_view_display.media.hero_banner_and_slider.default',
+    'core.entity_view_display.media.hero_banner_and_slider.media_library',
+    'field.field.block_content.hero_banner_and_slider.field_hero_banner_and_slider',
+    'field.field.media.hero_banner_and_slider.field_banner_link',
+    'field.field.media.hero_banner_and_slider.field_cta_button',
+    'field.field.media.hero_banner_and_slider.field_media_image',
+    // 'field.field.media.image.field_media_image',
+    // 'field.field.media.video.field_media_video_file',
+    'field.storage.block_content.field_hero_banner_and_slider',
+    'field.storage.media.field_banner_link',
+    'field.storage.media.field_cta_button',
+    // 'field.storage.media.field_media_image',
+    // 'field.storage.media.field_media_video_file',
+    'image.style.hero_banner_and_slider_desktop',
+    'image.style.hero_banner_and_slider_extra_wide',
+    'image.style.hero_banner_and_slider_medium',
+    'image.style.hero_banner_and_slider_mobile',
+    'image.style.hero_banner_and_slider_wide',
+    'media.type.hero_banner_and_slider',
+    'responsive_image.styles.hero_banner_and_slider',
+  ];
+  foreach ($configNames as $configName) {
+    try {
+      $configFactory->getEditable($configName)->delete();
+    }
+    catch (\Exception $e) {
+      $logger->warning(sprintf('Unable to uninstall config: %s.', $configName));
+    }
+  }
+}
