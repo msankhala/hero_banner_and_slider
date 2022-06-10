@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_banner_and_slider_mobile
+label: 'Hero Banner and Slider: Mobile'
+effects:
+  8fcd26f7-7770-477c-a218-d80afb42e7e1:
+    uuid: 8fcd26f7-7770-477c-a218-d80afb42e7e1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 576
+      height: 460
+      crop_type: focal_point

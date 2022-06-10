@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_banner_and_slider_extra_wide
+label: 'Hero Banner and Slider: Extra Wide'
+effects:
+  9288e297-cc57-4ac2-a4ce-df3ac6b862b2:
+    uuid: 9288e297-cc57-4ac2-a4ce-df3ac6b862b2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 3000
+      height: 1290
+      crop_type: focal_point

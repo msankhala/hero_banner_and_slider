@@ -1,0 +1,5 @@
+name: Hero Banner and Slider
+type: module
+description: 'This module provide the Hero banner and slider functionality.'
+core_version_requirement: ^9.2
+package: Hero Banner

@@ -1,0 +1,35 @@
+hero_banner_and_slider.hero.mobile:
+  label: mobile
+  mediaQuery: '(min-width: 0px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: Hero Banner and Slider
+hero_banner_and_slider.hero.medium:
+  label: medium
+  mediaQuery: '(min-width: 576px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: Hero Banner and Slider
+hero_banner_and_slider.hero.desktop:
+  label: desktop
+  mediaQuery: '(min-width: 968px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: Hero Banner and Slider
+hero_banner_and_slider.hero.wide:
+  label: wide
+  mediaQuery: '(min-width: 1200px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: Hero Banner and Slider
+hero_banner_and_slider.hero.extrawide:
+  label: extrawide
+  mediaQuery: '(min-width: 2000px)'
+  weight: 0
+  multipliers:
+    - 1x
+  group: Hero Banner and Slider

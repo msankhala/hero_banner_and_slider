@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: hero_banner_and_slider_desktop
+label: 'Hero Banner and Slider:  Desktop'
+effects:
+  24b3fa62-d8b0-406b-ad6b-fb385be7348e:
+    uuid: 24b3fa62-d8b0-406b-ad6b-fb385be7348e
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 2000
+      height: 860
+      crop_type: focal_point
