@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_cta_button
+    - media.type.hero_banner_and_slider
+  module:
+    - link
+id: media.hero_banner_and_slider.field_cta_button
+field_name: field_cta_button
+entity_type: media
+bundle: hero_banner_and_slider
+label: 'CTA button'
+description: 'The CTA button is displayed on the banner image. Leave empty if you don''t want to show the CTA button on banner.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

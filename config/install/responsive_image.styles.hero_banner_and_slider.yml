@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_banner_and_slider_desktop
+    - image.style.hero_banner_and_slider_extra_wide
+    - image.style.hero_banner_and_slider_medium
+    - image.style.hero_banner_and_slider_mobile
+    - image.style.hero_banner_and_slider_wide
+  module:
+    - hero_banner_and_slider
+id: hero_banner_and_slider
+label: 'Hero Banner and Slider'
+image_style_mappings:
+  -
+    breakpoint_id: hero_banner_and_slider.hero.extrawide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_banner_and_slider_extra_wide
+  -
+    breakpoint_id: hero_banner_and_slider.hero.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_banner_and_slider_wide
+  -
+    breakpoint_id: hero_banner_and_slider.hero.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_banner_and_slider_desktop
+  -
+    breakpoint_id: hero_banner_and_slider.hero.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_banner_and_slider_medium
+  -
+    breakpoint_id: hero_banner_and_slider.hero.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_banner_and_slider_mobile
+breakpoint_group: 'Hero Banner and Slider'
+fallback_image_style: '_original image_'

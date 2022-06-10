@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_banner_link
+    - media.type.hero_banner_and_slider
+  module:
+    - link
+id: media.hero_banner_and_slider.field_banner_link
+field_name: field_banner_link
+entity_type: media
+bundle: hero_banner_and_slider
+label: 'Banner link'
+description: 'The banner link. The link behind the banner image. Leave empty if you don''t want to make the banner image clickable.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

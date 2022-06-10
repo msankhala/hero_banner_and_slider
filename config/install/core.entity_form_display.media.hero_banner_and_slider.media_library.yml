@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.hero_banner_and_slider.field_banner_link
+    - field.field.media.hero_banner_and_slider.field_cta_button
+    - field.field.media.hero_banner_and_slider.field_media_image
+    - image.style.thumbnail
+    - media.type.hero_banner_and_slider
+  module:
+    - image
+    - link
+id: media.hero_banner_and_slider.media_library
+targetEntityType: media
+bundle: hero_banner_and_slider
+mode: media_library
+content:
+  field_banner_link:
+    type: link_default
+    weight: 1
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_cta_button:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_media_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  name: true
+  path: true
+  status: true
+  uid: true
