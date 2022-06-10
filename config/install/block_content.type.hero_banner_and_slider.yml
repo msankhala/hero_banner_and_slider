@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: hero_banner_and_slider
+label: 'Hero Banner and Slider'
+revision: 0
+description: 'This block provides the hero banner and slider. If there is a single image it will act as a hero banner, if multiple images are provided then they will act as a banner slider.'

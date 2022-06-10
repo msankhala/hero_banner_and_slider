@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file hero_banner_and_slider.module
+ */
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function hero_banner_and_slider_form_hero_banner_and_slider_alter(&$form, &$form_state, $form_id) {
+  d($form_id);
+}
+
