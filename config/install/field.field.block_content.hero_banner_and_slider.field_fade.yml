@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner_and_slider
+    - field.storage.block_content.field_fade
+id: block_content.hero_banner_and_slider.field_fade
+field_name: field_fade
+entity_type: block_content
+bundle: hero_banner_and_slider
+label: Fade
+description: 'Use fade animation as a transition when moving from one slide to another. Default to true.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

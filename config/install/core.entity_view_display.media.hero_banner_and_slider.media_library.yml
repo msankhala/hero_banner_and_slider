@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.media_library
     - field.field.media.hero_banner_and_slider.field_banner_link
+    - field.field.media.hero_banner_and_slider.field_banner_text
     - field.field.media.hero_banner_and_slider.field_cta_button
     - field.field.media.hero_banner_and_slider.field_media_image
     - image.style.medium
@@ -11,6 +12,9 @@ dependencies:
   module:
     - image
     - link
+    - text
+_core:
+  default_config_hash: q5aOcYqL3mzk33FVWdvT_YMQDiZyY-xCqGo8wBQ763E
 id: media.hero_banner_and_slider.media_library
 targetEntityType: media
 bundle: hero_banner_and_slider
@@ -18,20 +22,26 @@ mode: media_library
 content:
   field_banner_link:
     type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
     weight: 1
     region: content
+  field_banner_text:
+    type: text_trimmed
     label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
+      trim_length: 400
     third_party_settings: {  }
+    weight: 3
+    region: content
   field_cta_button:
     type: link
-    weight: 2
-    region: content
     label: above
     settings:
       trim_length: 80
@@ -40,14 +50,16 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 2
+    region: content
   thumbnail:
     type: image
     label: hidden
     settings:
-      image_style: medium
       image_link: ''
-    weight: 0
+      image_style: medium
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

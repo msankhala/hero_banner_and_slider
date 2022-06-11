@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner_and_slider
+    - field.storage.block_content.field_autoplay_speed
+id: block_content.hero_banner_and_slider.field_autoplay_speed
+field_name: field_autoplay_speed
+entity_type: block_content
+bundle: hero_banner_and_slider
+label: 'Autoplay speed'
+description: 'The autoplay speed in miliseconds. Default to 2000 ms.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 2000
+default_value_callback: ''
+settings:
+  min: 100
+  max: 10000
+  prefix: ''
+  suffix: ms
+field_type: integer

@@ -3,7 +3,17 @@ status: true
 dependencies:
   config:
     - block_content.type.hero_banner_and_slider
+    - field.field.block_content.hero_banner_and_slider.field_autoplay
+    - field.field.block_content.hero_banner_and_slider.field_autoplay_speed
+    - field.field.block_content.hero_banner_and_slider.field_fade
     - field.field.block_content.hero_banner_and_slider.field_hero_banner_and_slider
+    - field.field.block_content.hero_banner_and_slider.field_infinite_looping
+    - field.field.block_content.hero_banner_and_slider.field_show_arrows
+    - field.field.block_content.hero_banner_and_slider.field_show_dots
+    - field.field.block_content.hero_banner_and_slider.field_slides_to_scroll
+    - field.field.block_content.hero_banner_and_slider.field_slides_to_show
+_core:
+  default_config_hash: qGD56HzDb0pCVvudi9sG9DBCnAMEj8w-Ky7XFT3VboU
 id: block_content.hero_banner_and_slider.default
 targetEntityType: block_content
 bundle: hero_banner_and_slider
@@ -11,11 +21,19 @@ mode: default
 content:
   field_hero_banner_and_slider:
     type: entity_reference_entity_view
-    weight: 0
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 0
     region: content
-hidden: {  }
+hidden:
+  field_autoplay: true
+  field_autoplay_speed: true
+  field_fade: true
+  field_infinite_looping: true
+  field_show_arrows: true
+  field_show_dots: true
+  field_slides_to_scroll: true
+  field_slides_to_show: true

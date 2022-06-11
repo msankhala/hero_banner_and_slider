@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner_and_slider
+    - field.storage.block_content.field_slides_to_show
+  module:
+    - options
+id: block_content.hero_banner_and_slider.field_slides_to_show
+field_name: field_slides_to_show
+entity_type: block_content
+bundle: hero_banner_and_slider
+label: 'Slides to show'
+description: 'How many slides to show at a time. Default to 1.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

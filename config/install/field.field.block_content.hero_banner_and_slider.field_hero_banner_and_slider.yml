@@ -5,6 +5,9 @@ dependencies:
     - block_content.type.hero_banner_and_slider
     - field.storage.block_content.field_hero_banner_and_slider
     - media.type.hero_banner_and_slider
+    - media.type.video
+_core:
+  default_config_hash: W2Mrl_fTc0GVORxCSwz2jeWFilL8CjvPqgP_jl42stE
 id: block_content.hero_banner_and_slider.field_hero_banner_and_slider
 field_name: field_hero_banner_and_slider
 entity_type: block_content
@@ -20,9 +23,10 @@ settings:
   handler_settings:
     target_bundles:
       hero_banner_and_slider: hero_banner_and_slider
+      video: video
     sort:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: hero_banner_and_slider
 field_type: entity_reference

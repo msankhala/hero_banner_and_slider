@@ -3,27 +3,123 @@ status: true
 dependencies:
   config:
     - block_content.type.hero_banner_and_slider
+    - field.field.block_content.hero_banner_and_slider.field_autoplay
+    - field.field.block_content.hero_banner_and_slider.field_autoplay_speed
+    - field.field.block_content.hero_banner_and_slider.field_fade
     - field.field.block_content.hero_banner_and_slider.field_hero_banner_and_slider
+    - field.field.block_content.hero_banner_and_slider.field_infinite_looping
+    - field.field.block_content.hero_banner_and_slider.field_show_arrows
+    - field.field.block_content.hero_banner_and_slider.field_show_dots
+    - field.field.block_content.hero_banner_and_slider.field_slides_to_scroll
+    - field.field.block_content.hero_banner_and_slider.field_slides_to_show
   module:
+    - field_group
     - media_library
     - media_library_edit
+third_party_settings:
+  field_group:
+    group_slick_carousel_settings:
+      children:
+        - field_autoplay
+        - field_autoplay_speed
+        - field_infinite_looping
+        - field_fade
+        - field_show_dots
+        - field_show_arrows
+        - field_slides_to_show
+        - field_slides_to_scroll
+      label: 'Slick carousel settings'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: 'The slick carousel settings for this slider.'
+        required_fields: true
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: 47U8MFzuzeSxzuOv9urryykUN48t7k441zI95EM7-dM
 id: block_content.hero_banner_and_slider.default
 targetEntityType: block_content
 bundle: hero_banner_and_slider
 mode: default
 content:
+  field_autoplay:
+    type: boolean_checkbox
+    weight: 5
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_autoplay_speed:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fade:
+    type: boolean_checkbox
+    weight: 8
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
   field_hero_banner_and_slider:
     type: media_library_widget
-    weight: 26
+    weight: 1
+    region: content
     settings:
       media_types: {  }
     third_party_settings:
       media_library_edit:
         show_edit: '1'
+  field_infinite_looping:
+    type: boolean_checkbox
+    weight: 7
     region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_show_arrows:
+    type: boolean_checkbox
+    weight: 10
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_show_dots:
+    type: boolean_checkbox
+    weight: 9
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_slides_to_scroll:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_slides_to_show:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   info:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60

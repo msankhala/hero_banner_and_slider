@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_banner_and_slider
+    - field.storage.block_content.field_show_arrows
+id: block_content.hero_banner_and_slider.field_show_arrows
+field_name: field_show_arrows
+entity_type: block_content
+bundle: hero_banner_and_slider
+label: 'Show arrows'
+description: 'Show the left and right side arrows on carousel.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

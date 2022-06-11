@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.hero_banner_and_slider.field_banner_link
+    - field.field.media.hero_banner_and_slider.field_banner_text
     - field.field.media.hero_banner_and_slider.field_cta_button
     - field.field.media.hero_banner_and_slider.field_media_image
     - image.style.thumbnail
@@ -11,6 +12,9 @@ dependencies:
   module:
     - image
     - link
+    - text
+_core:
+  default_config_hash: z2ggIc7rhAzwkoMMPFk8WwVITobHPuHdOpYCVzp80sc
 id: media.hero_banner_and_slider.media_library
 targetEntityType: media
 bundle: hero_banner_and_slider
@@ -24,22 +28,30 @@ content:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_banner_text:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_cta_button:
     type: link_default
-    weight: 2
+    weight: 3
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
   field_media_image:
+    type: image_image
     weight: 0
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
 hidden:
   created: true
   name: true

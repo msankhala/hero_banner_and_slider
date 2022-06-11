@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.hero_banner_and_slider.field_banner_link
+    - field.field.media.hero_banner_and_slider.field_banner_text
     - field.field.media.hero_banner_and_slider.field_cta_button
     - field.field.media.hero_banner_and_slider.field_media_image
     - image.style.thumbnail
@@ -11,6 +12,9 @@ dependencies:
     - image
     - link
     - path
+    - text
+_core:
+  default_config_hash: jbzh1RC_D32YETX508bFdlMMEXFbchAry5IGJgnoALw
 id: media.hero_banner_and_slider.default
 targetEntityType: media
 bundle: hero_banner_and_slider
@@ -23,29 +27,37 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_banner_link:
+    type: link_default
     weight: 101
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
+  field_banner_text:
+    type: text_textarea
+    weight: 103
     region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_cta_button:
+    type: link_default
     weight: 102
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   field_media_image:
+    type: image_image
     weight: 0
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    type: image_image
-    region: content
   name:
     type: string_textfield
     weight: -5
@@ -62,19 +74,19 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 100
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
-    region: content
     third_party_settings: {  }
 hidden: {  }
